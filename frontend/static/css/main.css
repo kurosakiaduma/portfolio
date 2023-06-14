@@ -85,28 +85,46 @@ body{
   display: flex;
 }
 
-.project {
+.project,
+.biocard,
+.linkscard {
   margin-bottom: 20px;
   padding: 20px;
   border: 2px solid black;
   border-radius: 20px;
   position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  overflow: hidden;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: white;
+  }
+  50% {
+    border-color: black;
+  }
+  100% {
+    border-color: white;
+  }
 }
 
 .project::before {
+  content: "";
   position: absolute;
   top: -5px;
   left: -5px;
   right: -5px;
   bottom: -5px;
-  border: 3px solid green;
+  border: 3px solid;
   border-radius: 25px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  animation: borderAnimation 2s linear infinite;
+  z-index: -1;
 }
 
-.project:hover::before {
-  opacity: 1;
+.project:hover {
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-links {
@@ -122,4 +140,8 @@ body{
 .contact-icons {
   display: flex;
   justify-content: space-evenly;
+}
+
+.resource-link a{
+text-decoration: none;
 }

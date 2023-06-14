@@ -1,7 +1,7 @@
 /* main.css */
 
 body{
-  background-color: #f0f0f0;
+  background-color: #d3c5c5;
 }
 
 .profile-picture {
@@ -26,8 +26,7 @@ body{
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 
@@ -35,8 +34,8 @@ body{
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: black;
+  color: #f0f0f0;  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -45,7 +44,7 @@ body{
 }
 
 .buttons button.active {
-  background-color: #f0f0f0;
+  background-color: #6b6666;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -117,5 +116,10 @@ body{
 
 .project-links a {
   text-align: center;
+  text-decoration: none;
 }
 
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+}

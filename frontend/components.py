@@ -6,35 +6,53 @@ def PersonalInfo():
     return html.div(
         {},
         html.div(
-            html.a({"href": "https://www.linkedin.com/in/tevin_aduma", "target": "_blank"},html.i({"class": "fab fa-linkedin fa-2x"})),
-            html.a({"href": "https://github.com/kurosakiaduma", "target": "_blank"},html.i({"class": "fab fa-github fa-2x"})),
-            html.a({"href": "https://twitter.com/kurosakiaduma", "target": "_blank"},html.i({"class": "fab fa-twitter fa-2x"})),
-            html.a({"href": "https://www.reddit.com/user/kurosakiaduma", "target": "_blank"},html.i({"class": "fab fa-reddit fa-2x"})),
-            html.a({"href": "https://www.linkedin.com/", "target": "_blank"},html.i({"class": "fab fa-mail fa-2x fa-orange"})),
+            {"class": "contact-icons"},
+            html.a({"href": "https://www.linkedin.com/in/tevin_aduma", "target": "_blank"},html.i({"class": "fab fa-linkedin fa-2x","style": {"color": "#0077B5"}})),
+            html.a({"href": "https://github.com/kurosakiaduma", "target": "_blank"},html.i({"class": "fab fa-github fa-2x","style": {"color": "#000000"}})),
+            html.a({"href": "https://twitter.com/kurosakiaduma", "target": "_blank"},html.i({"class": "fab fa-twitter fa-2x","style": {"color": "#1da1f2"}})),
+            html.a({"href": "https://www.reddit.com/user/kurosakiaduma", "target": "_blank"},html.i({"class": "fab fa-reddit fa-2x","style": {"color": "#ff4500"}})),
+            html.a({"href": "https://www.linkedin.com/", "target": "_blank"},html.i({"class": "far fa-envelope fa-2x", "style": {"color": "#0072c6"}})),
+            html.a({"href": "https://www.linkedin.com/", "target": "_blank"},html.i({"class": "fab fa-discord fa-2x", "style": {"color": "#7289da"}})),
             ),
-        html.h1("Tevin Joel Aduma"),
-        html.p("Cloud Engineer| Software Engineer | Machine Learning Engineer"),
-        html.p("Contact: kurosakiaduma@gmail.com"),
+        html.hr({"style":{"color":"#d3c5c5"}}),
+        html.h2("Tevin Joel Aduma"),
+        html.h4("Cloud Engineer| Software Engineer | Machine Learning Engineer"),
     )
 
 @component
 def ProjectsList(projects: dict):
     project_elements = []
     for name, details in projects.items():
-        project_elements.append(
-            html.div(
-                {"class": "project"},
-                [
-                    html.h4(name),
-                    html.p(details["Desc"]),
-                    html.p(
-                        {"class": "project-links"},
-                        html.a({"href": details["Github"], "target": "_blank"}, "Github"),
-                        html.a({"href": details["Deployment"], "target": "_blank"}, "Deployment"),
-                    )
-                ],
+        if details["Deployment"]!="#":
+            project_elements.append(
+                html.div(
+                    {"class": "project"},
+                    [
+                        html.h4(name),
+                        html.p(details["Desc"]),
+                        html.p(
+                            {"class": "project-links"},
+                            html.a({"href": details["Github"], "target": "_blank"}, html.i({"class": "fab fa-github fa-2x","style": {"color": "black"}}),"Github Repo"),
+                            html.a({"href": details["Deployment"], "target": "_blank"}, html.i({"class": "fas fa-rocket fa-2x", "style": {"color":"#ff4500"}}),"Deployment"),
+                        )
+                    ],
+                )
             )
-        )
+        else:
+            project_elements.append(
+                html.div(
+                    {"class": "project"},
+                    [
+                        html.h4(name),
+                        html.p(details["Desc"]),
+                        html.p(
+                            {"class": "project-links"},
+                            html.a({"href": details["Github"], "target": "_blank"}, html.i({"class": "fab fa-github fa-2x","style": {"color": "black"}}),"Github Repo"),
+                        )
+                    ],
+                )
+            )
+            
     return html.div(
         {"class": "project-card"},
         project_elements
@@ -44,12 +62,11 @@ def ProjectsList(projects: dict):
 def Bio():
     return html.div(
         {"class": "biocard"},
-        html.p("I am a Computer Science undergraduate with a passion for technology and its potential to transform the world.\
-            I love listening to lofi, jazz, and instrumental music while diving into coding adventures.\
-                My interests also extend to machine learning, soccer, cooking, and gaming.\
-                    I strongly believe that empathy can make the\
-          world a better place. I'm dedicated to driving business strategy through MLOps and the web,\
-          exploring innovative ways to make a positive impact."),
+        html.p("Hi👋🏾, I'm Tevin, a passionate Computer Science undergraduate with a deep love for technology and its potential to transform the world. I'm captivated by the enchanting melodies of lofi, jazz, and instrumental 🎶, which often accompany my coding adventures."),
+        html.p("My curiosity extends beyond software development, as I am also fascinated by the realm of machine learning and its applications. I believe that through the power of data and intelligent algorithms, we can unlock innovative solutions to complex problems."),
+        html.p("When I'm not immersed in the world of technology, you can find me on the football pitch ⚽, where I enjoy the camaraderie and competition 💪🏾. Cooking is another creative outlet I indulge in, experimenting with flavors and techniques to create delightful culinary experiences. Anime and gaming scenes also are also where I can unwind and explore virtual worlds, allowing me to embrace new perspectives and narratives."),
+        html.p("One core belief that guides me is the importance of empathy. I truly believe that a more empathetic world can lead to positive change and foster understanding among individuals 🫱🏾‍🫲🏼"),
+        html.p("Combining my technical expertise with a passion for business strategy, I am driven to explore the intersection of MLOps and web development. By leveraging data-driven insights and efficient operational practices, I aim to help businesses thrive and make a meaningful impact. Join me on this exciting journey as we harness the power of technology, empathy, and innovation to shape a brighter future 🌟"),
         )
 
 @component

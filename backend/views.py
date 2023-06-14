@@ -6,7 +6,7 @@ def projectDetails():
         "Poza": {
             "Desc": "A Django-powered health clinic that facilitates online booking and medical chatbots",
             "Github": "https://github.com/kurosakiaduma/poza",
-            "Deployment": "https://railway.up.poza.app",
+            "Deployment": "https://poza.up.railway.app/",
             },
         "Anime Industry KPIs":{
             "Desc": "A meticulous assessment of performance factors and indicators in the success of studio releases by conducting a meticulous study of data scraped from MyAnimeList.",
@@ -20,3 +20,10 @@ def projectDetails():
         },
     }
     return projects
+
+def resourceDetails():
+    resources = {
+        "GeeksForGeeks": "https://geeksforgeeks.com",
+        "Codepal AI": "https://codepal.ai/",
+    }
+    return resources

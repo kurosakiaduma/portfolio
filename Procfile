@@ -1,1 +1,1 @@
-web: gunicorn portf.wsgi:application --bind 0.0.0.0:7305 --reload | railway run "cat > gunicorn.log" & daphne portf.asgi:application | railway run "cat > daphne.log"
+web: gunicorn portf.wsgi:application --bind 0.0.0.0:7305 --reload & daphne -b 0.0.0.0 portf.asgi:application

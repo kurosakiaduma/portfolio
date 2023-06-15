@@ -1,1 +1,1 @@
-web: daphne portf.asgi:application -b 0.0.0.0:7305 
+web: daphne portf.asgi:application -b 0.0.0.0

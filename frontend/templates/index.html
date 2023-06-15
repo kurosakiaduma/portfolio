@@ -41,7 +41,7 @@
             <div class="row">
                 <div id="info" class="content col-md-6">
                     <img src="{% static 'img/first.jpg' %}" class="profile-picture">
-                    {% component "frontend.components.PersonalInfo" %}
+                    {% component "frontend.src.components.personalinfo.avatar" %}
                 </div>
                 <div id="content" class="content col-md-6">
                     <div class="buttons">
@@ -50,11 +50,11 @@
                         <button onclick="handleLinksClick()">Links</button>
                     </div>
                     {% with projects=projects %}
-                        {% component "frontend.components.ProjectsList" projects=projects %}
+                        {% component "frontend.src.components.projects.ProjectsList" projects=projects %}
                     {% endwith %}
-                    {% component "frontend.components.Bio" %}
+                    {% component "frontend.src.components.bio.Bio" %}
                     {% with resources=resources %}
-                        {% component "frontend.components.Resources" resources=resources %}
+                        {% component "frontend.src.components.resources.Resources" resources=resources %}
                     {% endwith %}
                 </div>
             </div>

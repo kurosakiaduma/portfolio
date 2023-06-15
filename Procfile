@@ -1,1 +1,1 @@
-web: daphne portf.asgi:application --bind 0.0.0.0:7305 --reload
+web: daphne portf.asgi:application

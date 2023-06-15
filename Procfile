@@ -1,1 +1,1 @@
-web: daphne portf.asgi:application -b 0.0.0.0
+web: gunicorn portf.wsgi:application --bind 0.0.0.0:7305 --reload & daphne -b 0.0.0.0 portf.asgi:application

@@ -1,1 +1,1 @@
-web: gunicorn portf.wsgi:application & daphne -b 0.0.0.0 -p 9000 portf.asgi:application
+web: uvicorn portf.asgi:application --host=0.0.0.0 

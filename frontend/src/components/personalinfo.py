@@ -14,6 +14,9 @@ def avatar():
             html.a({"href": "https://www.linkedin.com/", "target": "_blank"},html.i({"class": "fab fa-discord fa-2x", "style": {"color": "#7289da"}})),
             ),
         html.hr({"style":{"color":"#d3c5c5"}}),
-        html.h2("Tevin Joel Aduma"),
-        html.h4("Cloud Engineer| Software Engineer | Machine Learning Engineer"),
+        html.h3("Hi 🙂, my name is"),
+        html.h3("Tevin Joel Aduma 🧑🏾‍💻"),
+        html.hr({"style":{"color":"#d3c5c5"}}),
+        html.h4("Cloud Engineer ☁️| Software Engineer 💻"),
+        html.h4("Machine Learning Engineer 🤖")
     )

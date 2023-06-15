@@ -23,7 +23,13 @@ def projectDetails():
 
 def resourceDetails():
     resources = {
-        "GeeksForGeeks": "https://geeksforgeeks.com",
-        "Codepal AI": "https://codepal.ai/",
+        "GeeksForGeeks": {
+            "link": "https://geeksforgeeks.com",
+            "type": "study"
+                          },
+        "Codepal AI": {
+            "link": "https://codepal.ai/",
+            "type": "ai"
+            },
     }
     return resources

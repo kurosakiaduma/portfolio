@@ -1,8 +1,6 @@
 from django.shortcuts import render
-from .components import PersonalInfo
+from .src.components.personalinfo import avatar
 from backend.views import projectDetails, resourceDetails
 
 def index(request):
-    projects = projectDetails()
-    resources = resourceDetails()
-    return render(request, "index.html", {"personal_info": PersonalInfo(), "projects": projects, "resources": resources})
+    return render(request, "index.html", {"personal_info": avatar(), "projects": projectDetails(), "resources": resourceDetails()})

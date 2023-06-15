@@ -47,12 +47,14 @@
                     <div class="buttons">
                         <button onclick="handleProjectClick()" class="active">Portfolio Showcase</button>
                         <button onclick="handleBioClick()">Bio</button>
-                        <button onclick="handleLinksClick()">Links</button>
+                        <button onclick="handleSkillsClick()">Skills</button>
+                        <button onclick="handleLinksClick()">Resource Links</button>
                     </div>
                     {% with projects=projects %}
                         {% component "frontend.src.components.projects.ProjectsList" projects=projects %}
                     {% endwith %}
                     {% component "frontend.src.components.bio.Bio" %}
+                    {% component "frontend.src.components.skills.Skills" %}
                     {% with resources=resources %}
                         {% component "frontend.src.components.resources.Resources" resources=resources %}
                     {% endwith %}

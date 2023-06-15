@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
 """
 
 import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "portf.settings")
 
 from channels.auth import AuthMiddlewareStack  # noqa: E402
 from channels.routing import ProtocolTypeRouter, URLRouter  # noqa: E402
@@ -15,7 +16,6 @@ from channels.sessions import SessionMiddlewareStack  # noqa: E402
 from django.core.asgi import get_asgi_application
 from reactpy_django import REACTPY_WEBSOCKET_PATH  # noqa: E402
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "portf.settings")
 
 django_asgi_app = get_asgi_application()
 

@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+
+# ignore scripts folder
+Scripts/
+
+# ignore the Lib folder
+Lib/
+
+# ignore the py virtual env config file
+pyvenc.cfg

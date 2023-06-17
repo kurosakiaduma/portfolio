@@ -11,7 +11,7 @@ def avatar():
             html.a({"href": "https://twitter.com/kurosakiaduma", "target": "_blank"},html.i({"class": "fab fa-twitter fa-2x","style": {"color": "#1da1f2"}})),
             html.a({"href": "https://www.reddit.com/user/kurosakiaduma", "target": "_blank"},html.i({"class": "fab fa-reddit fa-2x","style": {"color": "#ff4500"}})),
             html.a({"href": "mailto:tevin74@live.com", "target": "_blank"},html.i({"class": "far fa-envelope fa-2x", "style": {"color": "#0072c6"}})),
-            html.a({"href": "https://www.linkedin.com/", "target": "_blank"},html.i({"class": "fab fa-discord fa-2x", "style": {"color": "#7289da"}})),
+            html.a({"href": "https://discordapp.com/users/512757282879307832", "target": "_blank"},html.i({"class": "fab fa-discord fa-2x", "style": {"color": "#7289da"}})),
             ),
         html.hr({"style":{"color":"#000000"}}),
         html.h3("Hi 🙂, my name is"),

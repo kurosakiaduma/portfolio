@@ -2,6 +2,7 @@
 
 body{
   background: linear-gradient(to right, #bd00ff96, #ff000000);
+  overflow-x: hidden;
 }
 
 .profile-picture {
@@ -42,6 +43,7 @@ i:hover{
   animation: shake 1s infinite;
 }
 /* End */
+
 .container {
   margin-top: 50px;
 }

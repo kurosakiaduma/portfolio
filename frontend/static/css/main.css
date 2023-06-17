@@ -26,6 +26,22 @@ body{
   text-align: center;
 }
 
+/* Social links animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  75% { transform: translateX(5px) rotate(5deg); }
+  100% { transform: translateX(0); }
+}
+
+i{
+  transition: transform 0.2s;
+}
+
+i:hover{
+  animation: shake 1s infinite;
+}
+/* End */
 .container {
   margin-top: 50px;
 }
